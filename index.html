@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Care Homes and COVID-19 Deaths</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Henderson" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections/anchor-sections.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Care Homes and COVID-19 Deaths
+## An early use of the COVID-19 research dataset
+### David Henderson
+### Edinburgh Napier University/SCADR
+### 19th November 2020
+
+---
+
+
+
+## Background
+
+Almost half of all deaths attributable to COVID-19 in Scotland (and the wider UK) occurred in Care Homes. Despite this, most published research has focussed on the non-Care Home population. 
+
+There are a couple of **possible** reasons for this.
+
+1. Care Home residents can be difficult to identify in routine datasets
+
+1. The immediate research research response was focussed on those most likely to benefit from treatment.
+
+---
+
+## Background
+
+.pull-left[
+### Example 1
+
+&lt;img src="assets/paper_3.png"/&gt;
+]
+
+--
+.pull-right[
+### Example 2
+
+&lt;img src="assets/paper_4.png"/&gt;
+]
+
+---
+## Background
+
+.pull-left[
+### Example 3
+
+&lt;img src="assets/paper_1.png"/&gt;
+]
+
+--
+.pull-right[
+### Example 4
+
+&lt;img src="assets/paper_2.png"/&gt;
+]
+
+---
+
+## Background
+
+### Example 5
+
+&lt;img src="assets/paper_5.png"/&gt;
+
+---
+
+## Background
+
+### Motivating factors (recap)
+
+&lt;br/&gt;
+* **Most studies using Scottish data have concentrated on the *non*-care home population**
+
+&lt;br/&gt;
+
+* **Where care homes *have* been the focus:** 
+
+ 1. **the CHI flag has been used for identification- this is not entirely accurate**
+ 1. **analyses omit care home residents from important findings**
+ 1. **analyses may not be at the individual level**
+ 1. **important covariates (such as morbidity data from PC) are missing**
+
+---
+
+## Methods
+
+### Aim
+
+**To characterise the sociodemographic and health features of those over the age of 65 that have been identified as contracting COVID-19 and their associations with mortality**
+
+&lt;br/&gt;
+
+Main study period runs from 1st March - 30th June 2020
+
+&lt;br/&gt;
+Utilises the new COVID-19 Research Dataset and expedited approvals process
+
+---
+# Methods
+
+### COVID-19 research data
+
+&lt;img src="assets/phs_covid.png"/&gt;
+
+---
+
+## Methods
+
+### Data Sources
+
+.pull-left[
+* CHI
+  - Demographics
+  - CHI Care Home Flag
+  - UPRN (not yet available)
+* NRS Deaths
+* UCD deaths
+* ECOSS
+* PIS
+* Primary Care (not yet available)
+]
+
+.pull-right[
+* Diabetes
+* SICSAG
+* Unscheduled Care (using CUP IDs)
+ - SMR01
+ - A &amp; E
+ - GP OOH
+ - SAS
+ - NHS24]
+
+
+---
+## Results
+
+* Not yet unfortunately...
+
+&lt;br/&gt;
+
+* But we hope to have meaningful findings soon
+
+&lt;br/&gt;
+
+* Chance to understand the vulnerable care home population in more depth than we have seen previously
+
+&lt;br/&gt;
+
+* First look at how UPRN matches against CHI flag for care home residents
+
+
+---
+## Acknowledgments
+
+.pull-left[
+* Co-authors
+ - Dr Jenni Burton
+ - Dr Elizabeth Lemmon
+ - Dr Iain Atherton
+ - Dr Jan Savinc
+ - Prof Susan Shenkin
+ - Prof David Bell
+]
+
+.pull-right[
+* Support
+  - Prof Chris Dibben, Tracey Dart and all at SCADR
+  - eDRIS team (especially Suhail Iqbal and Dr Julian Augley)
+  - PBPP panel members
+]
+
+---
+
+class: center, middle
+
+## Thanks!
+
+### Any questions?
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) 
+
+Twitter: @_davidhen
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
